@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="stylesheet" href="index.css">  -->
-        <link rel="stylesheet" href="css_practice.css">
+        <link rel="stylesheet" href="20240702_css_practice.css">
         <title>document</title> 
         <!-- <style>
             h1{
@@ -17,13 +17,20 @@
         </style> -->
     </head>
 
+
+
+
+
+
     <body>
         <h1>내부 스타일 시트</h1>
         <P>head 태그 안에 style 태그를 만들고 그 안에 css 스타일을 정의 </P>
+        <!-- 위에 주석처리한 부분처럼 넣으면 됨! -->
 
         <h1>인라인 스타일</h1>
         <p>태그 안에 style 속성을 이용해  CSS 스타일을 적용하는 것</p>
         <P>우선순위가 가장 높음</P>
+        <!-- 태그마다 변경해야 하기 때문에 번거로워서 잘 사용하지 않음 -->
 
         <h1 id="p_id2">외부 스타일 시트</h1>
         <p>외부에 별도의 css파일을 만들고 head 부분에 link 시키는 방법</p>
@@ -31,22 +38,31 @@
         <!-- <link rel="stylesheet" href="index.css">  이렇게 head  부분에 작성 -->
         <!-- 너무 길어지거나 내용이 많으면 복잡하기 때문에 외부에 링크 시키는 방법을 가장 많이 씀 -->
         <!------------------------------------------------------------------->
-        
 
-        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <!-- css 선택자 -->
         <!-- 1) 전체 선택자 : 모든 요소를 다 선택 -->
         <!-- id 선택자 -->
         <h1 id="h1_id">id 선택자</h1>ㅣ
         <p id="p_id">id 선택자는 #id명으로 지정</p>
-
+        <br>
+        <br>
+        <br>
         <!-- class 선택자 -->
         <h1 class="h1_class">class 선택자</h1>
         <p class="p_class">class 선택자는 .클래스명으로 선택</p>
         <p class="p_class2">클래스는 중첩해서 여러개 같이 쓸 수 있다 </p>
         <p class="p_class p_class2 p_class3">다중 클래스를 선택할 때는 .연결해서 선택한다 </p>
         <br>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
 
@@ -61,7 +77,12 @@
         <h2 title="heading-first">heading-first</h2>
         <h2 title="heading second">heading second</h2>
         <h2 title="heading third">heading third</h2>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <p>
             <a href="https://www.test.com">https://www.test.com</a><br>
             <a href="http://www.test.com">http://www.test.com</a><br>
@@ -85,7 +106,13 @@
             </span> <!-- 손자들 -->
         </div>
         <p>paragraph 4</p>
+        <br>
+        <br>
+        <br>
+        <br>
 
+
+         
         <h1>자식 셀렉터 연습(부모-자식)</h1>
         <div class="parents">
             <p>paragraph 1</p>
@@ -98,66 +125,80 @@
         <!------------------------------------------------------------------->
         <!-- 형제 셀렉터  -->
         <br>
-
+        <br>
+        <br>
+        <br>
         <div class="siblings1">
-        <h1>형제 셀렉터 연습(형제간1) </h1>
-        <h2>형제 인접 셀렉터</h2>
-        <div> a div element </div>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <h1>형제 셀렉터 연습(형제간1) </h1>
+            <h2>형제 인접 셀렉터</h2>
+            
+            <div> a div element </div>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
 
-        <p> the first paragraph </p>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <p> the first paragraph </p>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
 
 
-        <h2>another list</h2>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <h2>another list</h2>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
         </div>
-
+        <br>
+        <br>
         <!------------------------------------------>
         <div class="siblings2">
         <h1>형제 셀렉터 연습(형제간2)</h1>
         <h2>형제 일반 셀렉터</h2>
         <div> a div element </div>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
 
-        <p> the first paragraph </p>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <p> the first paragraph </p>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
 
 
-        <h2>another list</h2>
-        <ul>
-            <li> coffee </li>
-            <li> tea </li>
-            <li> milk </li>
-        </ul>
+            <h2>another list</h2>
+            <ul>
+                <li> coffee </li>
+                <li> tea </li>
+                <li> milk </li>
+            </ul>
         </div>
         <!------------------------------------------------------------------->
+        <br>
+        <br>
         <br>
         <h1>가상 클래스 셀렉터</h1>
         <a href="#"> hover me</a><br><br>
         <input type="text" placeholder="focus me">
+        <!-- 포커스가 되어있을 때만 빨간색으로 나옴 -->
+
+
 
         <!------------------------------------------------------------------->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <h1>구조 가상 클래스 셀렉터</h1>
         <h2>: first-child, : last-child </h2>
@@ -167,16 +208,12 @@
 
             <h1>홈페이지에 오신 것을 환영합니다. </h1>
             <p>이 문단은 부모(div.structural)의 첫 번째 자식 문단이 아닙니다.
-               두번째 입니다.
-            </p>
-        <div>
-            <p>이것은 div의 첫번째 자식 문단 입니다. </p>
-            <p>이것은 div의 두번째 자식 문단 입니다. </p>
-        </div>
+               두번째 입니다. </p>
 
-
-
-
+            <div>
+                <p>이것은 div의 첫번째 자식 문단 입니다. </p>
+                <p>이것은 div의 두번째 자식 문단 입니다. </p>
+            </div>
         </div>
 
 

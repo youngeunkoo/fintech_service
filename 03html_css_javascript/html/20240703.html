@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="index.css">  -->
+        <link rel="stylesheet" href="20240703.css">
+        <title> 20240703_practice </title> 
+        
+    </head>
+
+
+    <body>
+
+        <h1>구조 가상 클래스 셀렉터</h1>
+        <h2> : first-child, : last-child </h2>
+
+        <div class="structural">
+            <p>div.structural 의 첫번째 문단</p>
+            <br>
+            <h1>홈페이지에 오신 것을 환영합니다. </h1>
+            <p>이 문단은 부모(div.structural)의 첫번째 자식 문단이 아닙니다. 두번째 입니다. </p>
+               
+            <div>
+                <p>이것은 div의 첫번째 자식 문단 입니다. </p>
+                <p>이것은 div의 두번째 자식 문단 입니다. </p>
+            </div>
+            <p>이것은 div의 마지막 자식 문단 입니다. </p>
+        </div>
+    <br><br><br>
+    <!-- ----------------------------------------------------------------------------------- -->
+        <div class="nth_child">
+            <h1> nth_child 연습 </h1>
+            <ol>
+                <li> espresso</li>
+                <li> americano</li>
+                <li> cafe latte</li>
+                <li> cafe mocha</li>
+                <li> caramel latte</li>
+                <li> cappuccino</li>
+            </ol>
+            <ul>
+                <li> espresso</li>
+                <li> americano</li>
+                <li> cafe latte</li>
+                <li> cafe mocha</li>
+                <li> caramel latte</li>
+                <li> cappuccino</li>
+            </ul>
+        </div>
+
+        <br><br><br>
+        <div class="of_type">
+            <h1>first-of-type, last-of-type, <br>nth-of-type 연습</h1>
+            <h1 class="para">this is a heading </h1>
+            <p>the first paragraph </p>
+            <p>the second paragraph </p>
+            <p>the third paragraph </p>
+            <p>the fourth paragraph </p>
+        <div><br>
+                <h1 class="para">this is a heading </h1>
+                <p>the first paragraph </p>
+                <p>the second paragraph </p>
+                <p>the third paragraph </p>
+                <p>the fourth paragraph </p>
+        </div>
+        </div>
+        <br><br><br>
+    <!-- ----------------------------------------------------------------------------------- -->
+        <div class="validity">
+            <h1> 정합성 체크 셀렉터 연습 </h1>
+            <label> 입력값이 반드시 필요 
+                <input type="text" required>
+            </label>
+            <br> 
+            <label> 특수문자를 포함하지 않는 4자리 문자 또는 숫자 
+                <input type="text" value="abl!"
+                    pattern="[a-zA-Z0-9]{4}" required> <!-- 정규 표현식 -->
+                    <!-- 영문자랑 숫자로 이루어진 4글자를 가져와라 -->
+            </label>
+            <br>
+            <label> 핸드폰 번호 형식 
+                <input type="text" value="010-1111-2222"
+                    pattern="^\d{3}-\d{3,4}-\d{4}$" required>
+                    <!-- 정수 숫자3자리로 시작, 정수로 시작하는데 3자리 or 4자리, 정수로 시작하는데 4자리수 -->
+                    <!-- 전화번호 010-0000-0000 추출할 때 -->
+            </label>
+        </div>
+        <br><br><br>
+    <!-- ----------------------------------------------------------------------------------- -->
+        <div class="pseudo_ele">
+            <h1> 가상 요소 셀렉터 연습 </h1> 
+            <h2> this is a heading </h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nisi laborum non animi commodi, a labore eos quaerat eius fuga iste perferendis earum velit? Non maiores blanditiis officia animi dolores?</p>
+        </div>
+        <br><br><br><br>
+    <!-- ----------------------------------------------------------------------------------- -->  
+
+
+
+
+
+
+    </body>
+</html>
