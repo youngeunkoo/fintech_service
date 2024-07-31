@@ -1,0 +1,63 @@
+/* transition */
+div.transition .red_box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 100px;  /*상하 중앙 정렬 */
+}
+
+div.transition .red_box:hover { /*redbox에 마우스 올리면 bluebox로 변경됨*/
+    background-color: blue;
+    transition-duration: 1s;
+/* 위 내용과 아래 내용 명칭 동일하게 통일시키기 */
+}
+
+
+/* transition-property : 속성값 
+none : 전환효과 속성을 지정하지 않는 것
+all : 모든 속성을 전환 효과 대상으로 지정
+background-color, color, width
+*/
+
+/* transition-duration : 시간 1s, 500ms (대부분 초단위), 트랜지션이 완료되는 시간;
+      ex) transition-duration: 3s;  red-->blue 로 변하는데 3초 걸림
+   transition-delay : 시간 1s, 500m ; 효과 작동 시간 지연 
+*/
+/* transition-timing-function : 전환효과의 진행속도를 지정
+1) linear : 처음 속도와 마지막 속도가 일정
+2) ease : 처음에는 속도가 빨라지다가 중간부터 점점 느려짐
+3) ease-in : 처음에는 속도가 느리지만 완료될때까지 점점 빨라짐
+4) ease-out : 처음에는 속도가 빠르지만 완료될때까지 점점 느려짐 
+5) ease-in-out : 처음에는 속도가 느리지만 점점 빨라지다가 다시 점점 느려짐
+*/
+
+.container .bar {
+    width: 10px;
+    transition-property: width;
+    transition-duration: 5s;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+}
+.container:hover .bar {
+    width: 220px;
+}
+
+.bar:nth-child(1) {
+    transition-timing-function: linear;
+}
+.bar:nth-child(2) {
+    transition-timing-function: ease;
+}
+.bar:nth-child(3) {
+    transition-timing-function: ease-in;
+}
+.bar:nth-child(4) {
+    transition-timing-function: ease-out;
+}
+.bar:nth-child(5) {
+    transition-timing-function: ease-in-out;
+}

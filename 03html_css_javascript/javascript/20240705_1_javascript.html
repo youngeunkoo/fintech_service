@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 외부 스크립트 링크 방법 -->
+    <!-- js확장자로 된 별도의 파일을 생성해서 작성하고 로딩 -->
+    <!-- 형식 1 : <script src="스크립트경로 파일명"></script> : body 가장아래 작성-->
+    <!-- 형식 2 : <script defer src="스크립트경로 파일명"></script> : head에 작성 -->
+    <!-- 최근에는 형식 2를 쓰도록 바뀜 -->
+    <!-- <script defer src="20240705_1_test.js\"></script> -->
+    <title>javascript</title>
+</head>
+
+
+
+
+
+<body>**
+    <button onclick="popup()"> 팝업 </button>
+
+
+
+    <script>
+        document.write("내부 스크립트 방법");
+    </script>
+
+    <!-- javascript 내부 스크립트 방법 -->
+    <!-- body 영역에서 가장 아래 부분에 script 태그 안에 정의한다. -->
+    <!-- javascript는 html 문서를 조작하는 xlo언어이기 때문에 
+         html과 css 로딩이 모두 끝난 후 요소를 찾아 조작하기 때문 -->
+    
+    <script src="20240705_1_test.js"></script> <!--자바스크립트 외부 링크 연결-->
+
+
+
+
+
+</body>
+</html>
