@@ -2,7 +2,7 @@ yfinance
 pandas
 numpy
 pandas-ta
-TA-Lib
+# TA-Lib
 matplotlib
 yahoo_fin
 requests_html
@@ -14,3 +14,4 @@ langchain-community
 tabulate
 seaborn
 mplfinance
+streamlit
