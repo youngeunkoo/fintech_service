@@ -1,24 +1,3 @@
-import streamlit as st
-import pandas as pd
-import yfinance as yf
-
-
-
-# In[ ]:
-import streamlit as st
-import pandas as pd
-import yfinance as yf
-import matplotlib.pyplot as plt
-from datetime import datetime
-import os
-
-
-import streamlit as st
-import pandas as pd
-import yfinance as yf
-import matplotlib.pyplot as plt
-from datetime import datetime
-import os
 
 # 세션 상태에서 ticker 값을 False로 초기화
 st.session_state["ticker"] = False

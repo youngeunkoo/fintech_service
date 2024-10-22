@@ -13,4 +13,5 @@ model
 .joblib
 *.jpg
 *.csv
-
+*.json
+C:/fintech_service/09Time_series/AutogluonModels
