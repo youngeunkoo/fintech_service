@@ -1,0 +1,65 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  /* 제목 스타일 */
+  h1 {
+    background: linear-gradient(45deg, #4A90E2, #9013FE); /* 그라데이션 배경 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* 텍스트를 투명으로 만들어 그라데이션만 보이게 */
+    font-size: 4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+  }
+  
+  /* 전체 레이아웃 */
+  #main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+  }
+  
+  /* 지도설정 */
+  #map {
+    flex: 3; /* 지도 영역을 더 크게 설정 */
+    height: 100%; /* 높이를 부모 요소에 맞춤 */
+    min-height: 500px; /* 최소 높이 설정 */
+  }
+  
+  
+  /* 오른쪽 정보 창 */
+  #info-panel {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #info-panel.hidden {
+    display: none;
+  }
+  
+  /* 정보 창 스타일 */
+  #location-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  #keywords-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #keywords-list li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  

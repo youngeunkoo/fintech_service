@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>분위기 지도</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <!-- 카카오맵 API -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=cf3a0088cdd7e5a988917a5d9d8f16c9"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>moodmap</h1>
+  <div id="main-container">
+    <!-- 지도 영역 -->
+    <div id="map"></div>
+    <!-- 오른쪽 정보 창 -->
+    <div id="info-panel" class="hidden">
+      <h2 id="location-title">지역 정보</h2>
+      <ul id="keywords-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
