@@ -1,0 +1,466 @@
+/* General styles */
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+#app {
+    display: flex;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px; /* Ensure consistent height */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a, .share-button {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.share-button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* 다른 요소와의 간격을 확보 */
+    margin-right: 30px; /* 오른쪽 끝과의 여백 설정 */
+
+}
+
+.logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+/* 모바일 화면용 폰트 크기 조정 */
+@media (max-width: 768px) { /* 화면 너비가 768px 이하일 때 적용 */
+    .nav-links a {
+        font-size: 0.7rem; /* 모바일에서 작은 폰트 크기 */
+    }
+}
+
+@media (max-width: 480px) { /* 화면 너비가 480px 이하일 때 적용 */
+    .nav-links a {
+        font-size: 0.6rem; /* 더 작은 화면에서 더 작은 폰트 크기 */
+    }
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Drawer 기본 스타일 */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 40%;
+    height: 100vh; /* 화면 높이의 50% */
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-left: 1px solid #ddd;
+}
+
+/* Drawer 열림 상태 */
+.drawer.open {
+    right: 0;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 제목 스타일 */
+.title {
+    font-size: 3.0rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 제목 스타일 */
+.subtitle {
+    margin-top: 40px;
+}
+
+/* 키워드 태그 */
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #6c63ff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer; /* 마우스 커서 변경 */
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+.tag:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* hover 시 약간의 그림자 효과 */
+    opacity: 80%;
+}
+
+/* 설명 스타일 */
+.description {
+    margin: 15px 0;
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.keyword-details {
+    margin-top: 20px;
+    display: none; /* 기본적으로 숨기기 */
+}
+
+.keyword-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.keyword-description-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 7px;
+    color: #333;
+}
+
+.keyword-extracted-words {
+    font-size: 14px;
+    color: #555;
+}
+
+.extracted-word {
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: #FFC1CC;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+
+
+/* 이미지와 버튼 스타일 */
+.media-container {
+    margin: 20px 0;
+    text-align: center;
+    
+}
+
+.media-img {
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+.btn:hover {
+    background-color: #5a54d2;
+}
+
+.text-btn {
+    background: none; /* 배경 제거 */
+    color: #6c63ff; /* 텍스트 색상 */
+    border: none; /* 테두리 제거 */
+    font-size: 1rem; /* 텍스트 크기 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+    padding: 0; /* 여백 제거 */
+    margin: 0; /* 여백 제거 */
+    text-decoration: underline; /* 텍스트에 밑줄 */
+    font-family: inherit; /* 폰트 상속 */
+}
+
+.text-btn:hover {
+    color: #5a54d2; /* 호버 시 텍스트 색상 변경 */
+    text-decoration: none; /* 호버 시 밑줄 제거 */
+}
+
+.text-btn:focus {
+    outline: none; /* 포커스 시 외곽선 제거 */
+}
+
+/* 영상 스타일 */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 10px; /* 캐러셀 위쪽에 여백 추가 (필요시) */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    white-space: nowrap; /* 이미지가 한 줄로 정렬되도록 설정 */
+}
+
+.carousel-images img {
+    height: auto; /* 높이를 자동으로 설정하여 원본 비율 유지 */
+    max-height: 500px; /* 세로로 너무 긴 이미지를 제한 */
+    width: auto; /* 너비를 원본 비율에 맞게 설정 */
+    max-width: 100%; /* 너무 가로로 긴 이미지를 제한 */
+    flex-shrink: 0; /* 이미지 크기가 축소되지 않도록 설정 */
+    margin-right: 10px; /* 이미지 간격 */
+    object-fit: contain; /* 원본 비율 유지 */
+}
+
+.carousel-images img:last-child {
+    margin-right: 0; /* 마지막 이미지는 간격 제거 */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    padding: 10px;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+.toast {
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    opacity: 0;
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+.shop-section {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 20px; /* 하단 패딩 추가 */
+    border-top: 1px solid #ccc;
+}
+
+.shop-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.shop-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+/* 카페 버튼 스타일 */
+.cafe-btn {
+    background-color: #4CAF50; /* 초록색 */
+}
+
+.cafe-btn:hover {
+    background-color: #45A049; /* 밝은 초록색 */
+}
+
+/* 음식점 버튼 스타일 */
+.restaurant-btn {
+    background-color: #2196F3; /* 파란색 */
+}
+
+.restaurant-btn:hover {
+    background-color: #1E88E5; /* 밝은 파란색 */
+}
+
+/* 커스텀 오버레이 하는 곳 */
+.custom-overlay {
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+    font-family: 'NanumSquareNeoExtraBold', sans-serif;
+    color: #000;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-height: 400px; /* 최대 높이 제한 */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto; /* 세로 방향으로 스크롤 가능 */
+    overflow-x: auto; /* 가로 방향 스크롤 제거 */
+}
+
+.popup-content {
+    position: relative;
+    text-align: left;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+}
+
+.popup-close:hover {
+    color: black;
+}
+
+/* 텍스트 스타일 */
+.popup-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.popup-content ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 20px; /* 리스트 들여쓰기 */
+}
+
+.popup-content li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  stock-analysis:
+    build: .
+    ports:
+      - "80:7860"
+    volumes:
+      - ./moodmap:/app/moodmap
+    container_name: moodmap_app
+    command: uvicorn moodmap.app:app --host 0.0.0.0 --port 7860
